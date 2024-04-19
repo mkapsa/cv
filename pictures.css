@@ -1,0 +1,21 @@
+/* Set up the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
+}
+
+/* Style the images */
+.grid-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Apply different styles for horizontal and vertical images */
+.grid-container .horizontal {
+    grid-column: span 2;
+}
+
+.grid-container .vertical {
+    grid-column: span 1;
+}

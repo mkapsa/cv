@@ -37,6 +37,7 @@ white-space: nowrap;
 
 .text{
     margin-right: 10px;
+    font-size: 17px;
 }
 .image{
     margin-left: 10px;
@@ -65,6 +66,12 @@ img{
     font-size: 22px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 
