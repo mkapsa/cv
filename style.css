@@ -1,11 +1,6 @@
 
 
-@media screen and (max-width: 800px) {
-    body{
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-}
+
 
 #name{
 
@@ -29,6 +24,13 @@ white-space: nowrap;
 
 }
 
+@media screen and (max-width: 850px) {
+    .container{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
 .text,.image{
     display: inline-block;    
 }
@@ -40,7 +42,7 @@ white-space: nowrap;
     margin-left: 10px;
 }
 
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 850px) { 
     .container{
         display: flex;
         flex-direction: column;
