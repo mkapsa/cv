@@ -1,7 +1,3 @@
-
-
-
-
 #name{
 
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -11,17 +7,13 @@ font-weight: bold;
 white-space: nowrap;
 }
 
-
-
 .container{
     display: flex;
-    display: inline-flex;
     padding: 5vw;
     box-sizing: border-box;
     max-width: 800px;   
-    margin-right: 20%;
-    margin-left: 20%;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 850px) {
