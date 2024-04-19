@@ -19,3 +19,14 @@
 .grid-container .vertical {
     grid-column: span 1;
 }
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container .horizontal {
+        grid-column: span 1;
+    }
+}
+
