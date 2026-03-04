@@ -417,14 +417,37 @@ h3 {
         column-count: 2;
     }
 
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
+    #hero {
+        padding-top: 0;
+        align-items: flex-start;
     }
 
-    .hero-nav {
-        justify-content: center;
+    .hero-content {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 0;
+        margin-top: 40px;
+    }
+
+    .hero-model {
+        margin-left: -60px;
+    }
+
+    #hero-canvas {
+        width: 420px;
+        height: 520px;
+    }
+
+    .hero-text {
+        margin-left: 0;
+        margin-top: -100px;
+        padding: 0 25px;
+        position: relative;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 2.4rem;
     }
 
     h1 {
@@ -439,11 +462,6 @@ h3 {
 
     h1 {
         font-size: 2rem;
-    }
-
-    #hero-canvas {
-        width: 300px;
-        height: 380px;
     }
 
     .category-grid {
