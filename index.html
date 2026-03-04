@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J35KTP6T4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J35KTP6T4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3J35KTP6T4');
+    </script>
 
-  gtag('config', 'G-3J35KTP6T4');
-</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matyáš Kapsa</title>
-    <meta name="description" content="Hi, I'm Matyáš Kapsa! I specialize in content creation, social media, communication and other forms of digital marketing. I'm based in Prague, but able to relocate. Get in touch!">
+    <meta name="description" content="Hi, I'm Matyáš Kapsa! I specialize in content creation, social media, communication and other forms of digital marketing. Based in Prague.">
 
     <link rel="stylesheet" href="style.css">
 
@@ -24,63 +22,164 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#040047">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
+    <meta name="theme-color" content="#0a0a0f">
 
-    
-
-        
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="item text">
-            <h1 id="name">matyáš kapsa</h1>
-            <p id="introduction" class="element">
-                Hi, I'm Matyáš! I specialize in content creation, social media and other forms of digital marketing.
-                <br>
-                <br>
-                Quick learner.
-                <br>
-                <br>
-                Based in Prague.
-            </p>
-            <!-- <h2 class="heading">what i work/ed on</h2>
-            <ul class="experience">
-                <li><a href="https://www.instagram.com/prakul.cz" >Prague culinary institute</a> - marketing, photography, cooking classes</li>
-                <li>A <a href="https://nejlepsikucharky.cz/kniha/svatecni#obsah">cookbook</a> - photographic assistance, consulting, tasting</li>
-                <li>Installation of <a href="https://en.wikipedia.org/wiki/The_Slav_Epic">The Slav Epic</a> in Prague & Moravský Krumlov - restorers' assistant</li>
-                <li>numerous physical jobs</li>
-            </ul> -->
-            <h2 class="heading">other things i do</h2>
-            <ul class="otherthings">
-                <li>I like <a href="/portfolio">taking pictures</a></li>
-                <li>I make <a href="https://www.youtube.com/@katymapsa">cooking videos</a></li>
-                <li>spaghetti <a href="https://github.com/mkapsa">coding</a> for fun (like this website)</li>
-                <li><a href="https://www.instagram.com/matykapsa">yoyoing</a></li>
-                <li>reading</li>
-                <li>playing guitar</li>
-                <li>recreational beekeeping and gardening</li>
-                <li>playing (card) games</li>
-            </ul>
-            <h2 class="heading">languages</h2>
-            <ul class="languages">
-                <li>Czech - proficient (native)</li>
-                <li>English - proficient (CEFR Score 215)</li>
-                <li>French - A2</li>
-            </ul>
-        </div>
-        <div class="item image">
-            <img src="headshot.jpg" alt="headshot">       
-            <h2 class="heading">contact me</h2>
-            <ul class="contact">
-                <li><a href="mailto:matykapsa@gmail.com">matykapsa@gmail.com</a></li>
-                <br>
-                <a href="https://twitter.com/katymapsa"><img class="twitter" src="img/logos/x.png" alt=""></a>
-                <a href="https://instagram.com/matykapsa"><img class="instagram" src="img/logos/ig.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/mkapsa/"><img class="linkedin" src="img/logos/linkedin.svg" alt=""></a>
-            </ul>
-            <br>
-        </div>
-    </div>                 
+    <canvas id="bg-canvas"></canvas>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-model">
+                    <canvas id="hero-canvas"></canvas>
+                </div>
+                <div class="hero-text">
+                    <h1>matyáš kapsa</h1>
+                    <p class="tagline">hi, i'm matyáš.</p>
+                    <p class="tagline">i do digital marketing, photography and content creation.</p>
+                    <p class="tagline">most of all, i like learning new things.</p>
+                    <nav class="hero-nav">
+                        <a href="#projects">projects</a>
+                        <a href="#portfolio">portfolio</a>
+                        <a href="#contact">contact</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h2>projects</h2>
+            <p class="intro">TBD</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>portfolio</h2>
+
+            <div class="portfolio-tiles">
+                <div class="portfolio-category">
+                    <button class="category-tile" aria-expanded="false">
+                        <span class="tile-label">portraits</span>
+                        <span class="tile-count">9</span>
+                        <span class="tile-arrow">+</span>
+                    </button>
+                    <div class="category-content">
+                        <div class="category-grid">
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF7257-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF8164-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF7722-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF8237-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF7143-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF8302-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF8314-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/DSCF8323-Edit.webp" alt="Portrait on black background"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/portraits/251103-lukashejlik-04.webp" alt="Lukáš Hejlík portrait"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-category">
+                    <button class="category-tile" aria-expanded="false">
+                        <span class="tile-label">events</span>
+                        <span class="tile-count">10</span>
+                        <span class="tile-arrow">+</span>
+                    </button>
+                    <div class="category-content">
+                        <div class="category-grid">
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF0711.webp" alt="YoYo performer on stage"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF2024.webp" alt="YoYo performer on stage"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF9158.webp" alt="YoYo performer mid-jump"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF9257.webp" alt="YoYo performer with string"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF9438.webp" alt="YoYo performer on stage"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF6052.webp" alt="Speaker at Prusa Research event"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF6434.webp" alt="Candid at networking dinner"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF6510.webp" alt="Guest at networking event"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF6258.webp" alt="Audience at Prusa Research event"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/events/DSCF6581.webp" alt="Guest at Prusa Research networking"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-category">
+                    <button class="category-tile" aria-expanded="false">
+                        <span class="tile-label">food & beverage</span>
+                        <span class="tile-count">6</span>
+                        <span class="tile-arrow">+</span>
+                    </button>
+                    <div class="category-content">
+                        <div class="category-grid">
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF5100.webp" alt="Cocktail being poured"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF5102.webp" alt="Cocktail close-up"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF2110.webp" alt="Chef in kitchen"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF3811.webp" alt="Dessert plating"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF5160.webp" alt="Freshly baked bread"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/fnb/DSCF7282.webp" alt="Beer glass in dark setting"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-category">
+                    <button class="category-tile" aria-expanded="false">
+                        <span class="tile-label">other</span>
+                        <span class="tile-count">4</span>
+                        <span class="tile-arrow">+</span>
+                    </button>
+                    <div class="category-content">
+                        <div class="category-grid">
+                            <figure><img loading="lazy" src="img/portfolio/other/tattoo-1.webp" alt="Tattoo detail"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/other/tattoo-2.webp" alt="Hand tattoo"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/other/meandry.webp" alt="Writing detail"></figure>
+                            <figure><img loading="lazy" src="img/portfolio/other/sunset.webp" alt="Sailboat at sunset"></figure>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>get in touch</h2>
+            <a href="mailto:matykapsa@gmail.com" class="email-link">matykapsa@gmail.com</a>
+            <div class="social-links">
+                <a href="https://twitter.com/katymapsa" aria-label="X / Twitter">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://instagram.com/matykapsa" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mkapsa/" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" hidden>
+        <button class="lightbox-arrow lightbox-prev" aria-label="Previous">&#8249;</button>
+        <img src="" alt="">
+        <button class="lightbox-arrow lightbox-next" aria-label="Next">&#8250;</button>
+    </div>
+
+    <noscript>
+        <style>
+            #bg-canvas, #hero-canvas { display: none; }
+            section { opacity: 1 !important; transform: none !important; }
+            .hero-model { background: url('headshot.jpg') center/cover; width: 300px; height: 400px; border-radius: 8px; }
+        </style>
+    </noscript>
+
+    <script type="module" src="js/bg-scene.js"></script>
+    <script type="module" src="js/hero-scene.js"></script>
+    <script type="module" src="js/scroll-effects.js"></script>
 </body>
 </html>
