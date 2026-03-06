@@ -201,8 +201,11 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
+let frameCount = 0;
+
 function animate() {
     requestAnimationFrame(animate);
+    frameCount++;
 
     const pos = pointGeo.attributes.position.array;
 
@@ -233,7 +236,8 @@ function animate() {
     }
     pointGeo.attributes.position.needsUpdate = true;
 
-    // Update lines
+    // Update lines (every 2nd frame to save CPU)
+    if (frameCount % 2 === 0) {
     let lineIdx = 0;
     const lp = lineGeo.attributes.position.array;
     const lc = lineGeo.attributes.color.array;
@@ -271,6 +275,7 @@ function animate() {
     lineGeo.setDrawRange(0, lineIdx * 2);
     lineGeo.attributes.position.needsUpdate = true;
     lineGeo.attributes.color.needsUpdate = true;
+    } // end line update skip
 
     // Cube drift — viewport wrapping
     cubeGroup.position.x += CUBE_DRIFT_SPEED;
