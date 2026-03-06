@@ -1,5 +1,4 @@
 import { setScrollY } from './bg-scene.js';
-import { setPaused as setHeroPaused } from './hero-scene.js';
 
 // Section reveal on scroll
 const sections = document.querySelectorAll('section:not(#hero)');
@@ -17,20 +16,6 @@ const revealObserver = new IntersectionObserver(
 
 for (const section of sections) {
     revealObserver.observe(section);
-}
-
-// Pause hero renderer when off-screen
-const heroSection = document.getElementById('hero');
-if (heroSection) {
-    const heroObserver = new IntersectionObserver(
-        (entries) => {
-            for (const entry of entries) {
-                setHeroPaused(!entry.isIntersecting);
-            }
-        },
-        { threshold: 0 }
-    );
-    heroObserver.observe(heroSection);
 }
 
 // Scroll position for background parallax
